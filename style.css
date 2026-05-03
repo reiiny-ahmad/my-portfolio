@@ -110,6 +110,21 @@ h1, h2, h3, h4 {
 .text-center { text-align: center; }
 .mt-4 { margin-top: 2rem; }
 
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
 /* =========================================
    Navigation
    ========================================= */
@@ -137,6 +152,13 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-content {
+        padding: 0 1.5rem;
+    }
 }
 
 .logo {
@@ -434,6 +456,13 @@ body:not(.light-mode) .fa-moon { display: none; }
     text-align: justify;
 }
 
+@media screen and (max-width: 480px) {
+    .about-text p {
+        text-align: left;
+        font-size: 1rem;
+    }
+}
+
 .about-text strong {
     color: var(--text-main);
 }
@@ -726,5 +755,35 @@ footer {
     
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+    
+    .visual-card pre {
+        padding: 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .name {
+        font-size: 3.5rem;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+    }
+    
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cta-group .btn {
+        width: 100%;
+        text-align: center;
     }
 }
