@@ -16,6 +16,15 @@
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Light Mode Variables */
+body.light-mode {
+    --bg-dark: #ffffff;
+    --bg-card: rgba(243, 244, 246, 0.7);
+    --text-main: #111827;
+    --text-muted: #4b5563;
+    --accent-glow: rgba(59, 130, 246, 0.2);
+}
+
 /* =========================================
    Reset & Base Styles
    ========================================= */
@@ -174,6 +183,29 @@ h1, h2, h3, h4 {
     background: var(--accent-primary);
     color: white;
 }
+
+/* Theme Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    color: var(--accent-primary);
+    transform: rotate(15deg);
+}
+
+body.light-mode .fa-sun { display: none; }
+body:not(.light-mode) .fa-moon { display: none; }
 
 /* =========================================
    Buttons
@@ -399,6 +431,7 @@ h1, h2, h3, h4 {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    text-align: justify;
 }
 
 .about-text strong {
@@ -418,6 +451,12 @@ h1, h2, h3, h4 {
     border-radius: 15px;
     border: 1px solid rgba(255,255,255,0.05);
     text-align: center;
+    transition: var(--transition-smooth);
+}
+
+body.light-mode .stat-card {
+    background: rgba(0,0,0,0.03);
+    border-color: rgba(0,0,0,0.05);
 }
 
 .stat-card h3 {
@@ -471,6 +510,11 @@ h1, h2, h3, h4 {
     background-color: rgba(0,0,0,0.2);
     border-top: 1px solid rgba(255,255,255,0.02);
     border-bottom: 1px solid rgba(255,255,255,0.02);
+    transition: var(--transition-smooth);
+}
+
+body.light-mode .dark-bg {
+    background-color: rgba(0,0,0,0.02);
 }
 
 .skills-grid {
